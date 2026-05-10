@@ -1,0 +1,124 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --danger: #f87171;
+  --success: #34d399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #0b1220;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  color: #062033;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+button.secondary {
+  background: #64748b;
+  color: white;
+}
+
+button.danger {
+  background: var(--danger);
+  color: #2f0a0a;
+}
+
+.row {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 850px) {
+  .row.two {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav a.active {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.output {
+  white-space: pre-wrap;
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 120px;
+  overflow: auto;
+}
+
+.ok {
+  color: var(--success);
+}
+
+.error {
+  color: var(--danger);
+}
